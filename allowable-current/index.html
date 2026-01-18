@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>許容電流計算 | 電工メモ</title>
+  <script type="module" crossorigin src="/web-denko-memo/assets/allowable-current-CBW2A6ti.js"></script>
+  <link rel="modulepreload" crossorigin href="/web-denko-memo/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/web-denko-memo/assets/allowable-current-CPPM7w0t.css">
+</head>
+
+<body>
+    <a href="../" class="back-link">
+        <span>←</span> 電工メモ
+    </a>
+
+    <header>
+        <h1>許容電流計算</h1>
+    </header>
+
+    <main class="calculator-card">
+        <div class="form-group">
+            <label for="wire-type">電線種別</label>
+            <select id="wire-type">
+                <option value="iv">IV電線 / VVFケーブル</option>
+                <option value="cv">CVケーブル (600V)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="wiresize">電線サイズ</label>
+            <select id="wiresize">
+                <!-- Options populated by JS based on wire type -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="wires-count">同一管内の電線数</label>
+            <select id="wires-count">
+                <option value="1">1 (単独)</option>
+                <option value="3">3以下</option>
+                <option value="4">4</option>
+                <option value="6">5〜6</option>
+                <option value="10">7〜15</option>
+                <option value="20">16以上</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="temperature">周囲温度 (℃)</label>
+            <input type="number" id="temperature" value="30" step="1" min="0" max="100">
+        </div>
+
+        <div class="result-container">
+            <div class="result-label">許容電流</div>
+            <div class="result-value" id="result-a">0<span class="result-unit">A</span></div>
+            <div class="result-info" id="result-detail">
+                基本許容電流: - A<br>
+                補正後の電流: - A
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

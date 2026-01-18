@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>電圧降下表(簡易版) | 電工メモ</title>
+  <script type="module" crossorigin src="/web-denko-memo/assets/voltage-drop-easy-BYmc7zt0.js"></script>
+  <link rel="modulepreload" crossorigin href="/web-denko-memo/assets/modulepreload-polyfill-B5Qt9EMX.js">
+  <link rel="stylesheet" crossorigin href="/web-denko-memo/assets/voltage-drop-easy-D8ZncAz1.css">
+</head>
+
+<body>
+    <a href="../" class="back-link">
+        <span>←</span> 電工メモ
+    </a>
+
+    <header>
+        <h1>電圧降下表(簡易版)</h1>
+    </header>
+
+    <main class="calculator-card">
+        <div class="form-group">
+            <label for="method">配線方式</label>
+            <select id="method">
+                <option value="1p2w">単相2線式 (1φ2W)</option>
+                <option value="1p3w" selected>単相3線式 (1φ3W)</option>
+                <option value="3p3w">三相3線式 (3φ3W)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="current">電流 (A)</label>
+            <select id="current">
+                <!-- Options will be populated by JS -->
+            </select>
+        </div>
+
+        <div class="table-scroll-container">
+            <table id="drop-table" class="data-table">
+                <thead>
+                    <tr id="table-header">
+                        <!-- Header will be populated by JS -->
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-info">
+            <p>※ 各数値は許容距離 (m) です。</p>
+            <p>※ 指定した電圧降下値 (V) 以内に収まる最大距離を表示しています。</p>
+        </div>
+    </main>
+
+</body>
+
+</html>
