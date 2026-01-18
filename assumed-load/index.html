@@ -6,9 +6,9 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>一般住宅の負荷想定 | 電工メモ</title>
-  <script type="module" crossorigin src="/assets/assumed-load-CPdKc4_J.js"></script>
+  <script type="module" crossorigin src="/assets/assumed-load-lsGCwN_5.js"></script>
   <link rel="modulepreload" crossorigin href="/assets/modulepreload-polyfill-B5Qt9EMX.js">
-  <link rel="stylesheet" crossorigin href="/assets/assumed-load-BUzwIlpD.css">
+  <link rel="stylesheet" crossorigin href="/assets/assumed-load-Dwg6dzEq.css">
 </head>
 
 <body>
@@ -23,18 +23,32 @@
     <main class="calculator-card">
         <section class="calc-section">
             <div class="form-group">
-                <label for="main-area">床面積 (㎡)</label>
+                <div class="label-row">
+                    <label for="main-area">床面積 (㎡)</label>
+                    <details class="info-details">
+                        <summary>?</summary>
+                        <div class="info-content">
+                            住宅全体の床面積を入力してください。<br>
+                            1㎡あたり40VAとして計算。
+                        </div>
+                    </details>
+                </div>
                 <input type="number" id="main-area" value="100" min="0">
             </div>
         </section>
-        <details>
-            <summary>この項目の説明</summary>
-            ここにヒントや補足説明を書きます。
-        </details>
+
         <section class="calc-section">
             <div class="form-group">
                 <div class="label-with-toggle">
-                    <label for="extra-load">住宅等の加算負荷 (VA)</label>
+                    <div class="label-row">
+                        <label for="extra-load">住宅等の加算負荷 (VA)</label>
+                        <details class="info-details">
+                            <summary>?</summary>
+                            <div class="info-content">
+                                エアコン2台目以降や容量の大きな機器があれば加算してください。
+                            </div>
+                        </details>
+                    </div>
                     <label class="toggle-container">
                         <input type="checkbox" id="enable-manual-extra">
                         <span class="toggle-text">手動入力</span>
